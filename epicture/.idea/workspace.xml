@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4182a82b-ab0a-4087-b1a4-99ca1627de62" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compoments/image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/HomePage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.4/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/4.4/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/android/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.idea/libraries/Gradle__com_facebook_fresco_drawee_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.idea/libraries/Gradle__com_facebook_fresco_fresco_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi24_0_0/com/facebook/react/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi24_0_0/com/facebook/react/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi25_0_0/com/facebook/react/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi25_0_0/com/facebook/react/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi26_0_0/com/facebook/react/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi26_0_0/com/facebook/react/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi27_0_0/com/facebook/react/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi27_0_0/com/facebook/react/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi28_0_0/com/facebook/react/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi28_0_0/com/facebook/react/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi29_0_0/com/facebook/react/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi29_0_0/com/facebook/react/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi29_0_0/expo/modules/camera/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi29_0_0/expo/modules/camera/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi29_0_0/expo/modules/facedetector/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi29_0_0/expo/modules/facedetector/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi29_0_0/expo/modules/permissions/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi29_0_0/expo/modules/permissions/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi30_0_0/com/facebook/react/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi30_0_0/com/facebook/react/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi30_0_0/expo/modules/ads/admob/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi30_0_0/expo/modules/ads/admob/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi30_0_0/expo/modules/barcodescanner/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi30_0_0/expo/modules/barcodescanner/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi30_0_0/expo/modules/camera/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi30_0_0/expo/modules/camera/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi30_0_0/expo/modules/facedetector/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi30_0_0/expo/modules/facedetector/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi30_0_0/expo/modules/localauthentication/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi30_0_0/expo/modules/localauthentication/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi30_0_0/expo/modules/location/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi30_0_0/expo/modules/location/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi30_0_0/expo/modules/payments/stripe/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi30_0_0/expo/modules/payments/stripe/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi30_0_0/expo/modules/permissions/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/abi30_0_0/expo/modules/permissions/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/compat/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/compat/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/coreui/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/coreui/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/coreutils/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/coreutils/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/customtabs/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/customtabs/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/design/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/design/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/fragment/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/fragment/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/graphics/drawable/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/graphics/drawable/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/graphics/drawable/animated/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/graphics/drawable/animated/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/mediacompat/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/mediacompat/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/transition/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/transition/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/v4/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/v4/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/v7/appcompat/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/v7/appcompat/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/v7/cardview/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/v7/cardview/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/v7/recyclerview/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/android/support/v7/recyclerview/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/airbnb/lottie/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/airbnb/lottie/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/devmarvel/creditcardentry/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/devmarvel/creditcardentry/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/ads/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/ads/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/applinks/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/applinks/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/common/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/common/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/core/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/core/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/drawee/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/drawee/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/drawee/backends/pipeline/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/drawee/backends/pipeline/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/fbui/textlayoutbuilder/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/fbui/textlayoutbuilder/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/login/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/login/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/marketing/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/marketing/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/messenger/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/messenger/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/places/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/places/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/react/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/react/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/share/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/facebook/share/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/google/android/cameraview/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/google/android/cameraview/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/google/android/exoplayer2/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/google/android/exoplayer2/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/google/android/exoplayer2/ui/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/google/android/exoplayer2/ui/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/google/android/gms/ads/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/google/android/gms/ads/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/google/android/gms/auth/api/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/google/android/gms/auth/api/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/google/android/gms/base/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/google/android/gms/base/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/google/android/gms/maps/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/google/android/gms/maps/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/google/android/gms/wallet/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/google/android/gms/wallet/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/google/firebase/firebase_common/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/google/firebase/firebase_common/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/google/maps/android/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/google/maps/android/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/stripe/android/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/stripe/android/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/theartofdev/edmodo/cropper/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/theartofdev/edmodo/cropper/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/yqritc/scalablevideoview/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/com/yqritc/scalablevideoview/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/expo/modules/ads/admob/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/expo/modules/ads/admob/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/expo/modules/barcodescanner/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/expo/modules/barcodescanner/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/expo/modules/camera/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/expo/modules/camera/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/expo/modules/facedetector/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/expo/modules/facedetector/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/expo/modules/localauthentication/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/expo/modules/localauthentication/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/expo/modules/location/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/expo/modules/location/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/expo/modules/payments/stripe/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/expo/modules/payments/stripe/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/expo/modules/permissions/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/expo/modules/permissions/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/host/exp/exponent/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/host/exp/exponent/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/host/exp/expoview/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/host/exp/expoview/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/io/branch/referral/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/io/branch/referral/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/io/nlopez/smartlocation/R.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/generated/source/r/devMinSdkDevKernel/debug/io/nlopez/smartlocation/R.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/blame/res/devMinSdkDevKernel/debug/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/blame/res/devMinSdkDevKernel/debug/multi-v2/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/blame/res/devMinSdkDevKernel/debug/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/blame/res/devMinSdkDevKernel/debug/multi-v2/values.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/mergeDevMinSdkDevKernelDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/mergeDevMinSdkDevKernelDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/mergeDevMinSdkDevKernelDebugResources/merged.dir/values/values.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/mergeDevMinSdkDevKernelDebugResources/merged.dir/values/values.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/incremental/mergeDevMinSdkDevKernelDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/incremental/mergeDevMinSdkDevKernelDebugResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/manifests/full/devMinSdkDevKernel/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/manifests/full/devMinSdkDevKernel/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/res/devMinSdkDevKernel/debug/resources-devMinSdkDevKernelDebug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/res/devMinSdkDevKernel/debug/resources-devMinSdkDevKernelDebug.ap_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/res/merged/devMinSdkDevKernel/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/res/merged/devMinSdkDevKernel/debug/values_values.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/res/symbol-table-with-package/devMinSdkDevKernel/debug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/res/symbol-table-with-package/devMinSdkDevKernel/debug/package-aware-r.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/intermediates/symbols/devMinSdkDevKernel/debug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/intermediates/symbols/devMinSdkDevKernel/debug/R.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/build/outputs/logs/manifest-merger-devMinSdk-devKernel-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build/outputs/logs/manifest-merger-devMinSdk-devKernel-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1646404308">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="gradle" value="3" />
+          <entry key="js" value="6" />
+          <entry key="json" value="1" />
+          <entry key="ts" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JSON" value="1" />
+          <entry key="JavaScript" value="6" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="TypeScript" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="gradle" value="10" />
+          <entry key="js" value="6389" />
+          <entry key="json" value="51" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JSON" value="51" />
+          <entry key="JavaScript" value="6389" />
+          <entry key="PLAIN_TEXT" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="TypeScriptServerServiceImpl" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/HomePage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/api.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>dependenci</find>
+      <find>console.</find>
+      <find>compile</find>
+      <find>getvi</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/views/login.js" />
+        <option value="$PROJECT_DIR$/views/homePage.js" />
+        <option value="$PROJECT_DIR$/android/app/build.gradle" />
+        <option value="$PROJECT_DIR$/compoments/image.js" />
+        <option value="$PROJECT_DIR$/App.js" />
+        <option value="$PROJECT_DIR$/utils/api.js" />
+        <option value="$PROJECT_DIR$/views/HomePage.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="960" />
+    <option name="y" value="27" />
+    <option name="width" value="960" />
+    <option name="height" value="1053" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="epicture" type="b2602c69:ProjectViewProjectNode" />
+              <item name="epicture" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4182a82b-ab0a-4087-b1a4-99ca1627de62" name="Default Changelist" comment="" />
+      <created>1540818226541</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1540818226541</updated>
+      <workItem from="1540818229961" duration="715000" />
+      <workItem from="1540824506789" duration="27217000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="27932000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="960" y="27" width="960" height="1053" extended-state="4" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="TypeScript" order="0" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/android/app/expo.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/build.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-native-image-pan-zoom/built/image-zoom/image-zoom.component.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="23" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="102" column="48" selection-start-line="102" selection-start-column="48" selection-end-line="102" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compoments/image.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/HomePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

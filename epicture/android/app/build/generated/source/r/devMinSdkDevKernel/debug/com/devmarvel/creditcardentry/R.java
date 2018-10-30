@@ -12,19 +12,19 @@ public final class R {
         public static final int shake = 0x7f010017;
     }
     public static final class attr {
-        public static final int animate_on_error = 0x7f040031;
-        public static final int card_number_hint = 0x7f040072;
-        public static final int cursor_color = 0x7f0400c9;
-        public static final int default_text_colors = 0x7f0400ce;
-        public static final int helper_text_color = 0x7f040108;
-        public static final int hint_text_color = 0x7f04010f;
-        public static final int include_exp = 0x7f040119;
-        public static final int include_helper = 0x7f04011a;
-        public static final int include_security = 0x7f04011b;
-        public static final int include_zip = 0x7f04011c;
-        public static final int input_background = 0x7f04011f;
-        public static final int text_color = 0x7f0401e4;
-        public static final int text_size = 0x7f0401e5;
+        public static final int animate_on_error = 0x7f040032;
+        public static final int card_number_hint = 0x7f040073;
+        public static final int cursor_color = 0x7f0400ca;
+        public static final int default_text_colors = 0x7f0400cf;
+        public static final int helper_text_color = 0x7f040109;
+        public static final int hint_text_color = 0x7f040110;
+        public static final int include_exp = 0x7f04011a;
+        public static final int include_helper = 0x7f04011b;
+        public static final int include_security = 0x7f04011c;
+        public static final int include_zip = 0x7f04011d;
+        public static final int input_background = 0x7f040120;
+        public static final int text_color = 0x7f0401e9;
+        public static final int text_size = 0x7f0401ea;
     }
     public static final class color {
         public static final int null_color = 0x7f060087;
@@ -50,7 +50,7 @@ public final class R {
         public static final int cc_form_layout = 0x7f09004d;
         public static final int cc_four_digits = 0x7f09004e;
         public static final int cc_zip = 0x7f09004f;
-        public static final int text_helper = 0x7f090191;
+        public static final int text_helper = 0x7f090192;
     }
     public static final class string {
         public static final int CreditCardFormCardNumberHint = 0x7f0f0000;
@@ -67,7 +67,7 @@ public final class R {
         public static final int AppTheme = 0x7f100008;
     }
     public static final class styleable {
-        public static final int[] CreditCardForm = { 0x7f040031, 0x7f040072, 0x7f0400c9, 0x7f0400ce, 0x7f040108, 0x7f04010f, 0x7f040119, 0x7f04011a, 0x7f04011b, 0x7f04011c, 0x7f04011f, 0x7f0401e4, 0x7f0401e5 };
+        public static final int[] CreditCardForm = { 0x7f040032, 0x7f040073, 0x7f0400ca, 0x7f0400cf, 0x7f040109, 0x7f040110, 0x7f04011a, 0x7f04011b, 0x7f04011c, 0x7f04011d, 0x7f040120, 0x7f0401e9, 0x7f0401ea };
         public static final int CreditCardForm_animate_on_error = 0;
         public static final int CreditCardForm_card_number_hint = 1;
         public static final int CreditCardForm_cursor_color = 2;

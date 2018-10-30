@@ -524,6 +524,7 @@
       <enum name="centerInside" value="5"/>
       <enum name="centerCrop" value="6"/>
       <enum name="focusCrop" value="7"/>
+      <enum name="fitBottomStart" value="8"/>
     </attr><attr format="reference" name="retryImage"/><attr name="retryImageScaleType">
       <enum name="none" value="-1"/>
       <enum name="fitXY" value="0"/>
@@ -534,6 +535,7 @@
       <enum name="centerInside" value="5"/>
       <enum name="centerCrop" value="6"/>
       <enum name="focusCrop" value="7"/>
+      <enum name="fitBottomStart" value="8"/>
     </attr><attr format="reference" name="failureImage"/><attr name="failureImageScaleType">
       <enum name="none" value="-1"/>
       <enum name="fitXY" value="0"/>
@@ -544,6 +546,7 @@
       <enum name="centerInside" value="5"/>
       <enum name="centerCrop" value="6"/>
       <enum name="focusCrop" value="7"/>
+      <enum name="fitBottomStart" value="8"/>
     </attr><attr format="reference" name="progressBarImage"/><attr name="progressBarImageScaleType">
       <enum name="none" value="-1"/>
       <enum name="fitXY" value="0"/>
@@ -554,6 +557,7 @@
       <enum name="centerInside" value="5"/>
       <enum name="centerCrop" value="6"/>
       <enum name="focusCrop" value="7"/>
+      <enum name="fitBottomStart" value="8"/>
     </attr><attr format="integer" name="progressBarAutoRotateInterval"/><attr name="actualImageScaleType">
       <enum name="none" value="-1"/>
       <enum name="fitXY" value="0"/>
@@ -564,7 +568,8 @@
       <enum name="centerInside" value="5"/>
       <enum name="centerCrop" value="6"/>
       <enum name="focusCrop" value="7"/>
-    </attr><attr format="reference" name="backgroundImage"/><attr format="reference" name="overlayImage"/><attr format="reference" name="pressedStateOverlayImage"/><attr format="boolean" name="roundAsCircle"/><attr format="dimension" name="roundedCornerRadius"/><attr format="boolean" name="roundTopLeft"/><attr format="boolean" name="roundTopRight"/><attr format="boolean" name="roundBottomRight"/><attr format="boolean" name="roundBottomLeft"/><attr format="color" name="roundWithOverlayColor"/><attr format="dimension" name="roundingBorderWidth"/><attr format="color" name="roundingBorderColor"/><attr format="dimension" name="roundingBorderPadding"/></declare-styleable>
+      <enum name="fitBottomStart" value="8"/>
+    </attr><attr format="reference" name="backgroundImage"/><attr format="reference" name="overlayImage"/><attr format="reference" name="pressedStateOverlayImage"/><attr format="boolean" name="roundAsCircle"/><attr format="dimension" name="roundedCornerRadius"/><attr format="boolean" name="roundTopLeft"/><attr format="boolean" name="roundTopRight"/><attr format="boolean" name="roundBottomRight"/><attr format="boolean" name="roundBottomLeft"/><attr format="boolean" name="roundTopStart"/><attr format="boolean" name="roundTopEnd"/><attr format="boolean" name="roundBottomStart"/><attr format="boolean" name="roundBottomEnd"/><attr format="color" name="roundWithOverlayColor"/><attr format="dimension" name="roundingBorderWidth"/><attr format="color" name="roundingBorderColor"/><attr format="dimension" name="roundingBorderPadding"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat"><attr name="android:orientation"/><attr name="android:gravity"/><attr name="android:baselineAligned"/><attr name="android:baselineAlignedChildIndex"/><attr name="android:weightSum"/><attr format="boolean" name="measureWithLargestChild"/><attr name="divider"/><attr name="showDividers">
             <flag name="none" value="0"/>
             <flag name="beginning" value="1"/>
@@ -666,7 +671,7 @@
 <enum name="auto" value="2"/>
 
 </attr><attr format="reference|string" name="scopeUris"/></declare-styleable>
-    <declare-styleable name="SimpleDraweeView"><attr format="string" name="actualImageUri"/></declare-styleable>
+    <declare-styleable name="SimpleDraweeView"><attr format="string" name="actualImageUri"/><attr format="reference" name="actualImageResource"/><attr name="fadeDuration"/><attr name="viewAspectRatio"/><attr name="placeholderImage"/><attr name="placeholderImageScaleType"/><attr name="retryImage"/><attr name="retryImageScaleType"/><attr name="failureImage"/><attr name="failureImageScaleType"/><attr name="progressBarImage"/><attr name="progressBarImageScaleType"/><attr name="progressBarAutoRotateInterval"/><attr name="actualImageScaleType"/><attr name="backgroundImage"/><attr name="overlayImage"/><attr name="pressedStateOverlayImage"/><attr name="roundAsCircle"/><attr name="roundedCornerRadius"/><attr name="roundTopLeft"/><attr name="roundTopRight"/><attr name="roundBottomRight"/><attr name="roundBottomLeft"/><attr name="roundTopStart"/><attr name="roundTopEnd"/><attr name="roundBottomStart"/><attr name="roundBottomEnd"/><attr name="roundWithOverlayColor"/><attr name="roundingBorderWidth"/><attr name="roundingBorderColor"/><attr name="roundingBorderPadding"/></declare-styleable>
     <declare-styleable name="SimpleExoPlayerView"><attr format="boolean" name="use_artwork"/><attr format="color" name="shutter_background_color"/><attr format="reference" name="default_artwork"/><attr format="boolean" name="use_controller"/><attr format="boolean" name="hide_on_touch"/><attr format="boolean" name="hide_during_ads"/><attr format="boolean" name="auto_show"/><attr name="resize_mode"/><attr name="surface_type"/><attr name="player_layout_id"/><attr name="show_timeout"/><attr name="rewind_increment"/><attr name="fastforward_increment"/><attr name="repeat_toggle_modes"/><attr name="show_shuffle_button"/><attr name="controller_layout_id"/></declare-styleable>
     <declare-styleable name="SnackbarLayout"><attr name="android:maxWidth"/><attr name="elevation"/><attr format="dimension" name="maxActionInlineWidth"/></declare-styleable>
     <declare-styleable name="Spinner"><attr name="android:prompt"/><attr name="popupTheme"/><attr name="android:popupBackground"/><attr name="android:dropDownWidth"/><attr name="android:entries"/></declare-styleable>
