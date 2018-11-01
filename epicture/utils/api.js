@@ -9,15 +9,22 @@ module.exports = {
 
     uploadImage(data, token, title, description) {
 
-        const body = data
-        return fetch("https://api.imgur.com/3/image", {
+        let formdata = new FormData()
+
+        formdata.append('type', 'base64');
+        formdata.append('image', data);
+        formdata.append('title', title)
+        formdata.append("description", description)
+
+
+        return fetch("https://api.imgur.com/3/upload.json", {
             method: 'POST',
             headers: {
                 Authorization: 'Bearer ' + token
 
 
             },
-            body
+            body: formdata
         })
             .then((response) => {
                 console.log(response)
@@ -26,6 +33,16 @@ module.exports = {
             .catch((error) => {
                 console.log(error)
             })
+    },
+    deleteImage(name, hash, token)
+    {
+        return fetch(`https://api.imgur.com/3/account/${name}/image/${hash}`, {
+            method: 'DELETE',
+            headers: {
+                Authorization: 'Bearer ' + token
+            }
+
+        })
     },
     favoriteAlbum(id, token) {
         return fetch(`https://api.imgur.com/3/album/${id}/favorite`, {

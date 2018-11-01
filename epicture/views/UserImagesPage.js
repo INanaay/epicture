@@ -13,6 +13,8 @@ import React from "react";
 import API from "../utils/api";
 import {MaterialIcons} from "@expo/vector-icons";
 import globalstyle from "../styles";
+import Toast from "react-native-easy-toast";
+
 
 let windowWidth = Dimensions.get('window').width
 
@@ -59,6 +61,21 @@ export default class UserImagesPage extends React.Component {
 
     }
 
+
+    deleteImage(hash)
+    {
+        console.log("Hash = " + hash)
+        API.deleteImage(global.name, hash, global.token)
+            .then((response) => {
+                this.refs.toast.show('Deleted Image');
+
+
+            }, (error) => {
+                console.log(error)
+            })
+    }
+
+
     renderRow(rowData) {
 
         let link;
@@ -94,6 +111,10 @@ export default class UserImagesPage extends React.Component {
                     <View style={{flex: 9, justifyContent: 'center'}}>
                         <Text style={styles.titleStyle}>{title}</Text>
                     </View>
+
+                    <TouchableOpacity style={{flex: 1,}}  onPress={() => this.deleteImage(rowData.deletehash)}>
+                        <MaterialIcons name="delete" size={25} color="green"/>
+                    </TouchableOpacity>
 
                 </View>
                 <Image
@@ -143,6 +164,8 @@ export default class UserImagesPage extends React.Component {
                 <ScrollView style={{flex: 1, marginTop: 20}}>
                     {images}
                 </ScrollView>
+                <Toast ref="toast"/>
+
             </View>
         )
     }

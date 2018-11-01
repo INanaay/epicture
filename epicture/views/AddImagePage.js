@@ -98,12 +98,11 @@ export default class AddImagePage extends React.Component {
                     </TouchableOpacity>
                 </View>
 
-                <View style={{flex: 1}}>
+                <View style={{flex: 2}}>
                 <TextField label={"Title"}
                            baseColor={'#FFF'}
                            textColor={'white'}
                            tintColor={'white'}
-                           labelHeight={100}
                            onChangeText={(title) => this.setState({title})}
                 />
                     <TextField label={"Description"}
@@ -115,9 +114,9 @@ export default class AddImagePage extends React.Component {
                 </View>
 
 
-                <View style={{alignItems: 'center', justifyContent: 'center'}}>
-                    <TouchableOpacity style={styles.chooseImageButton} onPress={this._uploadImage.bind(this)}>
-                        <Text style={{fontWeight: 'bold', color: 'white'}}>Upload</Text>
+                <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
+                    <TouchableOpacity style={styles.uploadButton} onPress={this._uploadImage.bind(this)}>
+                        <Text style={{fontWeight: 'bold', color: 'white', fontSize: 20}}>Upload</Text>
                     </TouchableOpacity>
                 </View>
                 <Toast ref="toast"/>
@@ -137,9 +136,20 @@ const styles = StyleSheet.create({
         backgroundColor: globalstyle.backgroundColor
     },
     chooseImageButton: {
+        borderRadius: 10,
+        marginTop: 20,
         margin: 5,
         width: '50%',
-        height: 30,
+        height: 40,
+        backgroundColor: 'green',
+        alignItems: 'center', justifyContent: 'center'
+    },
+    uploadButton: {
+        borderRadius: 10,
+        margin: 5,
+        width: '80%',
+        height: 50,
+
         backgroundColor: 'green',
         alignItems: 'center', justifyContent: 'center'
     },
