@@ -220,8 +220,8 @@
     <orderEntry type="library" name="Gradle: host.exp.exponent:expo-constants-abi29_0_0-1.0.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: xpp3:xpp3_min:1.1.4c@jar" level="project" />
     <orderEntry type="library" name="Gradle: javax.inject:javax.inject:1@jar" level="project" />
-    <orderEntry type="library" name="Gradle: com.facebook.fresco:imagepipeline-base-1.0.1" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.react:react-native-30.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.facebook.soloader:soloader-0.3.0" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:design-27.1.0" level="project" />
     <orderEntry type="library" name="Gradle: host.exp.exponent:expo-core-abi30_0_0-1.0.0" level="project" />
     <orderEntry type="library" name="Gradle: host.exp.exponent:expo-barcode-scanner-interface-abi30_0_0-1.0.0" level="project" />
@@ -262,6 +262,7 @@
     <orderEntry type="library" name="Gradle: com.airbnb.android:lottie-2.5.5" level="project" />
     <orderEntry type="library" name="Gradle: host.exp.exponent:expo-gl-abi30_0_0-1.0.0" level="project" />
     <orderEntry type="library" name="Gradle: host.exp.exponent:expo-payments-stripe-1.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.facebook.fresco:fresco-1.9.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.apache.maven:maven-profile:2.2.1@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-ads-identifier-15.0.1" level="project" />
     <orderEntry type="library" name="Gradle: host.exp.exponent:expo-media-library-1.0.0" level="project" />
@@ -278,7 +279,6 @@
     <orderEntry type="library" name="Gradle: host.exp.exponent:expo-face-detector-abi30_0_0-1.0.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.android.support.test:runner-1.0.2-alpha1" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-measurement-base-16.0.0" level="project" />
-    <orderEntry type="library" name="Gradle: com.facebook.fresco:fbcore-1.0.1" level="project" />
     <orderEntry type="library" name="Gradle: host.exp.exponent:expo-font-interface-1.0.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-basement-15.0.1" level="project" />
     <orderEntry type="library" name="Gradle: android.arch.lifecycle:common:1.1.0@jar" level="project" />
@@ -323,6 +323,7 @@
     <orderEntry type="library" name="Gradle: com.facebook.fresco:animated-webp-1.0.1" level="project" />
     <orderEntry type="library" name="Gradle: host.exp.exponent:expo-local-authentication-1.0.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.findbugs:jsr305:3.0.0@jar" level="project" />
+    <orderEntry type="library" name="Gradle: com.facebook.fresco:fbcore-1.9.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-gass-15.0.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.android.support.test:monitor-1.0.2-alpha1" level="project" />
     <orderEntry type="library" name="Gradle: com.madgag.spongycastle:prov:1.53.0.0@jar" level="project" />
@@ -355,6 +356,7 @@
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-vision-15.0.2" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-auth-api-phone-15.0.1" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-auth-base-15.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.facebook.fresco:drawee-1.9.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-messaging-17.1.0" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.stetho:stetho:1.3.1@jar" level="project" />
     <orderEntry type="library" name="Gradle: host.exp.exponent:expo-permissions-interface-abi30_0_0-1.0.0" level="project" />
@@ -380,7 +382,6 @@
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-analytics-impl-16.1.1" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.android:facebook-messenger-4.34.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.apache.maven:maven-settings:2.2.1@jar" level="project" />
-    <orderEntry type="library" name="Gradle: com.facebook.fresco:imagepipeline-1.0.1" level="project" />
     <orderEntry type="library" name="Gradle: android.arch.lifecycle:runtime-1.1.0" level="project" />
     <orderEntry type="library" name="Gradle: host.exp.exponent:expo-face-detector-1.0.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.robolectric:annotations:3.8@jar" level="project" />
@@ -431,7 +432,6 @@
     <orderEntry type="library" name="Gradle: com.facebook.fresco:animated-gif-1.0.1" level="project" />
     <orderEntry type="library" name="Gradle: com.yqritc:android-scalablevideoview-1.0.1" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.device.yearclass:yearclass:2.1.0@jar" level="project" />
-    <orderEntry type="library" name="Gradle: com.facebook.soloader:soloader-0.1.0" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.fbui.textlayoutbuilder:textlayoutbuilder-1.0.0" level="project" />
     <orderEntry type="library" name="Gradle: io.branch.sdk.android:library-2.17.1" level="project" />
     <orderEntry type="library" name="Gradle: host.exp.exponent:expo-file-system-abi30_0_0-1.0.0" level="project" />
@@ -474,11 +474,13 @@
     <orderEntry type="library" scope="TEST" name="Gradle: org.apache.maven:maven-repository-metadata:2.2.1@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-location-15.0.1" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-fitness-15.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.facebook.fresco:imagepipeline-base-1.9.0" level="project" />
     <orderEntry type="library" name="Gradle: host.exp.exponent:expo-gl-cpp-1.0.2" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-iid-interop-16.0.0" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-measurement-connector-16.0.0" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okhttp3:okhttp-urlconnection:3.4.1@jar" level="project" />
     <orderEntry type="library" name="Gradle: host.exp.exponent:expo-sensors-abi29_0_0-1.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.facebook.fresco:imagepipeline-1.9.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.robolectric:junit:3.8@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-flags-15.0.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.codehaus.plexus:plexus-utils:1.5.15@jar" level="project" />

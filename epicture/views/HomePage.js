@@ -2,7 +2,13 @@ import React from 'react';
 import {ListView, View, Image, Dimensions, Text, ScrollView, TouchableOpacity, StyleSheet, ActivityIndicator} from 'react-native'
 import {MaterialIcons } from '@expo/vector-icons/'
 import API from '../utils/api'
-import {createBottomTabNavigator} from 'react-navigation'
+import {createBottomTabNavigator, createStackNavigator} from 'react-navigation'
+import globalstyle from '../styles'
+import {SearchBar} from 'react-native-elements'
+import FavoritesPage from "./FavoritesPage";
+import UserImagesPage from "./UserImagesPage";
+import AddImagePage from "./AddImagePage";
+
 
 let windowWidth = Dimensions.get('window').width
 
@@ -10,34 +16,26 @@ let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
 
 class HomePage extends React.Component {
 
-    static navigationOptions = {
-        tabBarIcon: ({tintColor}) => (
-            <MaterialIcons name="favorite" size={25} color="green"/>
-        ),
-        tabBarOptions: {
-            showLabel: false, // hide labels
-            activeTintColor: '#474747', // active icon color
-            inactiveTintColor: '#586589',  // inactive icon color
-            style: {
-                backgroundColor: '#474747' // TabBar background
-            }
-
-        }
-    }
 
     constructor (props) {
         super(props)
+
+        console.log("GLOBAL = " + global.token)
+
         this.state = {
             dataSource: ds,
             loading: true,
-            images: []
+            images: [],
+            searchText: '',
         }
-    }
-    componentDidMount () {
 
+    }
+
+
+
+    componentDidFocus() {
         API.getViral()
             .then((response) => {
-                console.log(response)
                 this.setState({
                     dataSource: ds.cloneWithRows(response.data),
                     loading: false
@@ -47,13 +45,50 @@ class HomePage extends React.Component {
             })
     }
 
+    componentDidMount () {
+
+        this.subs = [
+            this.props.navigation.addListener('didFocus', () => this.componentDidFocus()),
+        ];
+
+
+    }
+
+    favoriteImage(id, isAlbum) {
+        console.log("Trying to fav")
+
+        if (isAlbum){
+            API.favoriteAlbum(id, global.token)
+                .then((response) => {
+                    console.log(response)
+                }, (error) => {
+                    console.log("Error: ", error)
+                })
+        }
+        else {
+            API.favoriteImage(id, global.token)
+                .then((response) => {
+                    console.log(response)
+                }, (error) => {
+                    console.log("Error: ", error)
+                })
+        }
+    }
+
+    addFavorite(rowData)
+    {
+        this.setState({
+            favorites: this.state.favorites.concat([rowData.id])
+        })
+    }
+
     renderRow (rowData) {
 
       let link;
       let imgHeight;
       let imgWidth;
       let title = rowData.title;
-
+      let isAlbum = false;
 
         if (rowData.hasOwnProperty("images"))
         {
@@ -63,6 +98,7 @@ class HomePage extends React.Component {
             link = rowData.images[0].link
             imgHeight = rowData.images[0].height
             imgWidth = rowData.images[0].width
+            isAlbum = true;
         }
         else if (rowData.hasOwnProperty("gifv"))
         {
@@ -76,22 +112,18 @@ class HomePage extends React.Component {
             imgWidth = rowData.width
         }
 
-
         imgHeight = imgHeight * windowWidth / imgWidth
 
-        console.log(link)
-        console.log(title)
-
-
         return (
+
                <View style={styles.rowStyle} >
                    <View style={styles.titleContainer}>
                        <View style={{flex: 9, justifyContent: 'center'}}>
                            <Text style={styles.titleStyle}>{title}</Text>
                        </View>
 
-                       <TouchableOpacity style={{flex: 1, }}>
-                           <MaterialIcons name="favorite" size={25} color="green" />
+                       <TouchableOpacity style={{flex: 1, }} onPress={() => this.favoriteImage(rowData.id, isAlbum)}>
+                           <MaterialIcons name="favorite" size={25} color='green' />
                        </TouchableOpacity>
                    </View>
                    <Image
@@ -101,6 +133,14 @@ class HomePage extends React.Component {
                    />
                 </View>
         )
+    }
+
+    navigateSearch()
+    {
+        console.log(this.state.searchText)
+        this.props.navigation.navigate("SearchPage", {
+            searchText: this.state.searchText
+        })
     }
 
 
@@ -121,9 +161,16 @@ class HomePage extends React.Component {
 
 
         return (
-            <View style={{flex: 1, marginTop: 20}}>
+            <View style={{flex: 1, backgroundColor: globalstyle.backgroundColor}}>
 
-                <ScrollView style={{flex: 1, backgroundColor: '#1c1c1c'}}>
+                <View style={{marginTop: 25}}>
+                    <SearchBar
+
+                        onSubmitEditing={() => this.navigateSearch()}
+                        onChangeText={(searchText) => this.setState({searchText})}
+                    />
+                </View>
+                <ScrollView style={{flex: 1, }}>
                     {images}
                     </ScrollView>
     </View>
@@ -132,7 +179,7 @@ class HomePage extends React.Component {
 }
 
 const styles = StyleSheet.create({
-    titleContainer: {flex: 1, backgroundColor: '#474747', borderRadius: 6, padding: 10, flexDirection: "row"
+    titleContainer: {flex: 1, backgroundColor: '#474747', borderTopLeftRadius: 6, borderTopRightRadius: 6, padding: 10, flexDirection: "row"
 
     },
     container: {
@@ -160,12 +207,53 @@ const styles = StyleSheet.create({
 
 });
 
+
 export default HomePage = createBottomTabNavigator ({
+        AddImagePage: {
+            screen: AddImagePage
+        },
     HomePage: {
         screen: HomePage
 
     },
-    Search: {
-        screen: HomePage
-    }
-})
+    Favorites: {
+        screen: FavoritesPage,
+    },
+    UserImages: {
+        screen: UserImagesPage
+    },
+
+        },
+    {
+
+        navigationOptions: ({navigation}) => ({
+
+
+            tabBarIcon: ({tintColor}) => {
+                const {routeName} = navigation.state;
+                let iconName;
+
+                if (routeName === "HomePage") {
+                    iconName = "home"
+                }
+                else if (routeName === "Favorites")
+                    iconName = "favorite"
+                else if (routeName === "UserImages")
+                    iconName = "collections"
+                else if (routeName === "AddImagePage")
+                    iconName =  "add-a-photo"
+
+                return <MaterialIcons name={iconName} size={25} color="green"/>
+            },
+            tabBarOptions: {
+                showLabel: false, // hide labels
+                activeTintColor: '#ffffff', // active icon color
+                inactiveTintColor: '#586589',  // inactive icon color
+                style: {
+                    backgroundColor: '#474747' // TabBar background
+                }
+
+            }
+
+        })
+    })

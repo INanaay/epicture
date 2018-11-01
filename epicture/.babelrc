@@ -1,6 +1,9 @@
 {
-  "presets": ["babel-preset-expo"],
+  "presets": ["babel-preset-expo", "react-native"],
   "env": {
+   "production": {
+      "plugins": ["transform-es2015-modules-commonjs"]
+    },
     "development": {
       "plugins": ["transform-react-jsx-source"]
     }
