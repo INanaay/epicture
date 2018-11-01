@@ -13,10 +13,16 @@ import React from "react";
 import API from "../utils/api";
 import {MaterialIcons} from "@expo/vector-icons";
 import globalstyle from "../styles";
+import Toast from "react-native-easy-toast";
 
 let windowWidth = Dimensions.get('window').width
 
 let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
+
+
+/**
+ * This is the favorites view.
+ */
 
 export default class FavoritesPage extends React.Component {
 
@@ -59,13 +65,27 @@ export default class FavoritesPage extends React.Component {
     }
 
 
+    /**
+     * Function called when user pressed the favorite button.
+     * @param id
+     * @param isAlbum
+     */
     favoriteImage(id, isAlbum) {
-        console.log("Trying to fav")
+
 
         if (isAlbum){
             API.favoriteAlbum(id, global.token)
                 .then((response) => {
                     console.log(response)
+                    if (response.success === true)
+                    {
+                        if (response.data === "favorited")
+                            this.refs.toast.show('Image Favorited');
+                        else
+                            this.refs.toast.show('Image Unfavorited');
+
+                    }
+
                 }, (error) => {
                     console.log("Error: ", error)
                 })
@@ -74,6 +94,14 @@ export default class FavoritesPage extends React.Component {
             API.favoriteImage(id, global.token)
                 .then((response) => {
                     console.log(response)
+                    if (response.success === true)
+                    {
+                        if (response.data === "favorited")
+                            this.refs.toast.show('Image Favorited');
+                        else
+                            this.refs.toast.show('Image Unfavorited');
+
+                    }
                 }, (error) => {
                     console.log("Error: ", error)
                 })
@@ -171,6 +199,8 @@ export default class FavoritesPage extends React.Component {
                 <ScrollView style={{flex: 1, marginTop: 20}}>
                     {images}
                 </ScrollView>
+                <Toast ref="toast"/>
+
             </View>
         )
     }

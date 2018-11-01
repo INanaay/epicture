@@ -1,3 +1,8 @@
+/**
+ * Global stylesheet
+ */
+
+
 /* ---- NAVIGATION ----- */
 
 

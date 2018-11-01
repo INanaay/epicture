@@ -13,14 +13,15 @@ import {
 import API from "../utils/api";
 import {MaterialIcons} from "@expo/vector-icons";
 import globalstyle from "../styles";
-import {SearchBar} from "react-native-elements";
+import Toast, {DURATION} from 'react-native-easy-toast'
+
 
 let windowWidth = Dimensions.get('window').width
 
 let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
 
-export default class SearchPage extends React.Component {
 
+export default class SearchPage extends React.Component {
 
     constructor(props) {
         super(props)
@@ -35,7 +36,13 @@ export default class SearchPage extends React.Component {
         }
     }
 
+
+    /**
+     * We get the search tag from the parent view.
+
+     */
     componentDidMount() {
+
 
         const searchTag = this.props.navigation.state.params.searchText
         console.log("Search tag =" + searchTag)
@@ -50,12 +57,56 @@ export default class SearchPage extends React.Component {
             })
     }
 
+    /**
+     * Function called when user pressed the favorite button.
+     * @param id
+     * @param isAlbum
+     */
+    favoriteImage(id, isAlbum) {
+
+
+        if (isAlbum){
+            API.favoriteAlbum(id, global.token)
+                .then((response) => {
+                    console.log(response)
+                    if (response.success === true)
+                    {
+                        if (response.data === "favorited")
+                            this.refs.toast.show('Image Favorited');
+                        else
+                            this.refs.toast.show('Image Unfavorited');
+
+                    }
+
+                }, (error) => {
+                    console.log("Error: ", error)
+                })
+        }
+        else {
+            API.favoriteImage(id, global.token)
+                .then((response) => {
+                    console.log(response)
+                    if (response.success === true)
+                    {
+                        if (response.data === "favorited")
+                            this.refs.toast.show('Image Favorited');
+                        else
+                            this.refs.toast.show('Image Unfavorited');
+
+                    }
+                }, (error) => {
+                    console.log("Error: ", error)
+                })
+        }
+    }
+
     renderRow(rowData) {
 
         let link;
         let imgHeight;
         let imgWidth;
         let title = rowData.title;
+        let isAlbum = false;
 
 
         if (rowData.hasOwnProperty("images")) {
@@ -65,6 +116,7 @@ export default class SearchPage extends React.Component {
             link = rowData.images[0].link
             imgHeight = rowData.images[0].height
             imgWidth = rowData.images[0].width
+            isAlbum = true;
         }
         else if (rowData.hasOwnProperty("gifv")) {
             link = rowData.gifv
@@ -86,7 +138,7 @@ export default class SearchPage extends React.Component {
                         <Text style={styles.titleStyle}>{title}</Text>
                     </View>
 
-                    <TouchableOpacity style={{flex: 1,}}>
+                    <TouchableOpacity style={{flex: 1,}}  onPress={() => this.favoriteImage(rowData.id, isAlbum)}>
                         <MaterialIcons name="favorite" size={25} color="green"/>
                     </TouchableOpacity>
                 </View>
@@ -135,6 +187,8 @@ export default class SearchPage extends React.Component {
                 <ScrollView style={{flex: 1,}}>
                     {images}
                 </ScrollView>
+                <Toast ref="toast"/>
+
             </View>
         )
     }

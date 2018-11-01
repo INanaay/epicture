@@ -1,11 +1,16 @@
 import React from 'react'
-import {Linking, View, TouchableOpacity, Text, WebView, Dimensions} from 'react-native'
+import {Linking, View, TouchableOpacity, Text, WebView, Dimensions, StyleSheet} from 'react-native'
 import API from '../utils/api'
 import {createStackNavigator} from 'react-navigation'
 import globalstyle from '../styles'
 
 let windowWidth = Dimensions.get('window').width
 let windowHeight = Dimensions.get('window').height
+
+
+/**
+ * This view is the login View. It is used so the user connects to Imgur via oauth2.
+ */
 
 export default class LoginScreen extends React.Component {
 
@@ -17,7 +22,13 @@ export default class LoginScreen extends React.Component {
 
     }
 
+    /**
+     * This function is called when the view is mounted. It calls the API to get the url containing the access token.
+     */
+
     componentDidMount () {
+
+
 
         API.login()
             .then((response) => {
@@ -31,6 +42,12 @@ export default class LoginScreen extends React.Component {
                 console.log('error: ', error)
             })
     }
+
+    /**
+     * We use a webview for the user to connect. We can access the callbakc url and get the token and mickname.
+     * @param webViewState
+     * @private
+     */
 
     _onNavigationStateChange(webViewState){
         const url = webViewState.url
@@ -52,6 +69,12 @@ export default class LoginScreen extends React.Component {
 
     }
 
+    /**
+     * Function called when token is available
+     * @param token
+     * @param name
+     */
+
     navigateToHomePage(token, name)
     {
 
@@ -67,16 +90,36 @@ export default class LoginScreen extends React.Component {
 
         return (
 
-            <View style={{width: '100%', height: '100%', backgroundColor: '#45c0ff', alignItems: 'center', justifyContent: 'center'}}>
+            <View style={{width: '100%', height: '100%', alignItems: 'center', justifyContent: 'center', backgroundColor: globalstyle.backgroundColor}}>
 
-                <WebView style={{width: windowHeight, height: windowHeight}} source={{uri: this.state.url}}
+
+
+
+                <WebView style={{width: windowWidth, backgroundColor: globalstyle.backgroundColor, height: windowHeight}} source={{uri: this.state.url}}
                          onNavigationStateChange={this._onNavigationStateChange.bind(this)}
 
                 >
 
+
                 </WebView>
+
+                <TouchableOpacity style={styles.chooseImageButton} onPress={() => this.props.navigation.navigate("HomePage")}>
+                    <Text style={{fontWeight: 'bold', color: 'white'}}>Next</Text>
+                </TouchableOpacity>
+
             </View>
         )
     }
 }
 
+const styles = StyleSheet.create({
+
+    chooseImageButton: {
+        margin: 5,
+        width: '50%',
+        height: 30,
+        backgroundColor: 'green',
+        alignItems: 'center', justifyContent: 'center'
+    },
+
+});

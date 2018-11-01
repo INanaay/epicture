@@ -5,6 +5,11 @@ import globalstyle from '../styles'
 import HomePage from "../views/HomePage";
 import SearchPage from "../views/SearchPage";
 
+/**
+ * This is the main stack navigator. The home page is the login screen. Once logged in,
+ * we move to the HomePage. The search Page is also in that navigator.
+ */
+
 export default Application = createStackNavigator ({
 
     LoginScreen: {

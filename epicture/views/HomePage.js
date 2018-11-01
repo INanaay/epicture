@@ -8,11 +8,16 @@ import {SearchBar} from 'react-native-elements'
 import FavoritesPage from "./FavoritesPage";
 import UserImagesPage from "./UserImagesPage";
 import AddImagePage from "./AddImagePage";
-
+import Toast, {DURATION} from 'react-native-easy-toast'
 
 let windowWidth = Dimensions.get('window').width
 
 let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
+
+
+/**
+ * This is the Home view.
+ */
 
 class HomePage extends React.Component {
 
@@ -32,8 +37,11 @@ class HomePage extends React.Component {
     }
 
 
-
+    /**
+     *  Call back, to reload images when switching tabs.
+     */
     componentDidFocus() {
+
         API.getViral()
             .then((response) => {
                 this.setState({
@@ -45,7 +53,13 @@ class HomePage extends React.Component {
             })
     }
 
+    /**
+     * Init of onFocus callback
+     */
+
     componentDidMount () {
+
+
 
         this.subs = [
             this.props.navigation.addListener('didFocus', () => this.componentDidFocus()),
@@ -54,13 +68,27 @@ class HomePage extends React.Component {
 
     }
 
+    /**
+     * Function called when user pressed the favorite button.
+     * @param id
+     * @param isAlbum
+     */
     favoriteImage(id, isAlbum) {
-        console.log("Trying to fav")
+
 
         if (isAlbum){
             API.favoriteAlbum(id, global.token)
                 .then((response) => {
                     console.log(response)
+                    if (response.success === true)
+                    {
+                        if (response.data === "favorited")
+                            this.refs.toast.show('Image Favorited');
+                        else
+                            this.refs.toast.show('Image Unfavorited');
+
+                    }
+
                 }, (error) => {
                     console.log("Error: ", error)
                 })
@@ -69,20 +97,29 @@ class HomePage extends React.Component {
             API.favoriteImage(id, global.token)
                 .then((response) => {
                     console.log(response)
+                    if (response.success === true)
+                    {
+                        if (response.data === "favorited")
+                            this.refs.toast.show('Image Favorited');
+                        else
+                            this.refs.toast.show('Image Unfavorited');
+
+                    }
                 }, (error) => {
                     console.log("Error: ", error)
                 })
         }
     }
 
-    addFavorite(rowData)
-    {
-        this.setState({
-            favorites: this.state.favorites.concat([rowData.id])
-        })
-    }
+
+    /**
+     *  We first must check if the image is a gif, album of image. For now, we dont handle gifs.
+     * @param rowData
+     * @returns {*}
+     */
 
     renderRow (rowData) {
+
 
       let link;
       let imgHeight;
@@ -135,8 +172,13 @@ class HomePage extends React.Component {
         )
     }
 
+    /**
+     * Function called when user searches for images.
+     */
+
     navigateSearch()
     {
+
         console.log(this.state.searchText)
         this.props.navigation.navigate("SearchPage", {
             searchText: this.state.searchText
@@ -173,6 +215,7 @@ class HomePage extends React.Component {
                 <ScrollView style={{flex: 1, }}>
                     {images}
                     </ScrollView>
+                <Toast ref="toast"/>
     </View>
     )
     }
@@ -208,10 +251,17 @@ const styles = StyleSheet.create({
 });
 
 
+/**
+ * This is the bottom menu. It is a TabNavigator. Each time the user switches tab,
+ * the whole page is rendered again, so the images are refreshed.
+ *
+ * Depending on the routeName, we choose an icon for the bottom menu
+ */
+
 export default HomePage = createBottomTabNavigator ({
-        AddImagePage: {
-            screen: AddImagePage
-        },
+
+
+
     HomePage: {
         screen: HomePage
 
@@ -222,6 +272,9 @@ export default HomePage = createBottomTabNavigator ({
     UserImages: {
         screen: UserImagesPage
     },
+        AddImagePage: {
+            screen: AddImagePage
+        },
 
         },
     {
@@ -243,12 +296,14 @@ export default HomePage = createBottomTabNavigator ({
                 else if (routeName === "AddImagePage")
                     iconName =  "add-a-photo"
 
-                return <MaterialIcons name={iconName} size={25} color="green"/>
+                return <MaterialIcons name={iconName} size={25} color={tintColor} />
             },
             tabBarOptions: {
                 showLabel: false, // hide labels
-                activeTintColor: '#ffffff', // active icon color
-                inactiveTintColor: '#586589',  // inactive icon color
+                activeTintColor: 'green',
+                inactiveTintColor: 'white',
+
+
                 style: {
                     backgroundColor: '#474747' // TabBar background
                 }

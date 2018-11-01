@@ -1,23 +1,30 @@
 const apiKey = "234799096cc962efbde690893d69edc89fb8afb7"
 const clientId = "cbd2e2ae6f404a8"
 
+/**
+ * Thisd is all the api functions
+ */
 
 module.exports = {
 
-    uploadImage(data, token, type, title, description, name) {
+    uploadImage(data, token, title, description) {
+
+        const body = data
         return fetch("https://api.imgur.com/3/image", {
             method: 'POST',
-
             headers: {
-                Authorization: 'Bearer ' + token,
+                Authorization: 'Bearer ' + token
+
 
             },
-            body: JSON.stringify({image: 'https://i.imgur.com/c6DEAjd.jpg'})
-
+            body
         })
             .then((response) => {
                 console.log(response)
                 return response.json()
+            })
+            .catch((error) => {
+                console.log(error)
             })
     },
     favoriteAlbum(id, token) {
@@ -44,7 +51,7 @@ module.exports = {
     },
 
     getUserImages(name, token) {
-        return fetch(`https://api.imgur.com/3/account/${name}/submissions/`, {
+        return fetch(`https://api.imgur.com/3/account/${name}/images/`, {
             headers: {
                 Authorization: 'Bearer ' + token
 

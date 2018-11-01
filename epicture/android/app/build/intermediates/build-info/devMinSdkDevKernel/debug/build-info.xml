@@ -6,7 +6,7 @@
     density="xxxhdpi"
     format="10"
     plugin-version="3.1.4"
-    timestamp="1541012108278"
+    timestamp="1541070047401"
     token="4099472673887572414"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -25,7 +25,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1541007378199"
+        timestamp="1541069429525"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/home/NANAA/Tek3/DEV_epicture_2018/epicture/android/app/build/intermediates/split-apk/devMinSdkDevKernel/debug/slices/slice_1.apk"
@@ -66,7 +66,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1541012108278"
+        timestamp="1541070047401"
         verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

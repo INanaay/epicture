@@ -18,6 +18,10 @@ let windowWidth = Dimensions.get('window').width
 
 let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
 
+/**
+ * This is the users images view.
+ */
+
 export default class UserImagesPage extends React.Component {
 
 
@@ -91,9 +95,6 @@ export default class UserImagesPage extends React.Component {
                         <Text style={styles.titleStyle}>{title}</Text>
                     </View>
 
-                    <TouchableOpacity style={{flex: 1,}}>
-                        <MaterialIcons name="favorite" size={25} color="green"/>
-                    </TouchableOpacity>
                 </View>
                 <Image
                     source={{uri: link}}

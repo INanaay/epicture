@@ -7,7 +7,7 @@ import renderer from 'react-test-renderer';
 
 import Image from './compoments/image'
 import LoginScreen from './views/login'
-import AddImagePage from './views/AddImagePage'
+
 
 
 
@@ -17,12 +17,6 @@ function sum(a, b) {
 
 
 
-it('Home screen renders correctly', () => {
-    const tree = renderer.create(
-        <HomePage />
-    ).toJSON();
-    expect(tree).toMatchSnapshot();
-});
 
 
 it('Login screen renders correctly', () => {

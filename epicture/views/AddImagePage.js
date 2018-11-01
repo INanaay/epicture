@@ -3,16 +3,9 @@ import {View, StyleSheet, TextInput, Text, TouchableOpacity, PermissionsAndroid}
 import globalstyle from '../styles'
 import { ImagePicker, Permissions } from 'expo';
 import API from '../utils/api'
+import { TextField } from 'react-native-material-textfield';
+import Toast, {DURATION} from 'react-native-easy-toast'
 
-
-const options = {
-    title: 'Select Avatar',
-    customButtons: [{ name: 'fb', title: 'Choose Photo from Facebook' }],
-    storageOptions: {
-        skipBackup: true,
-        path: 'images',
-    },
-};
 
 export default class AddImagePage extends React.Component {
 
@@ -20,10 +13,20 @@ export default class AddImagePage extends React.Component {
     {
         super(props)
         this.state = {
-           image: ''
+           image: null,
+            title: '',
+            description: ''
         }
     }
+
+    /**
+     * We need to ask the user the permissions to access its galery and camera
+     * @returns {Promise<void>}
+     */
+
     askPermissionsAsync = async () => {
+
+
         await Permissions.askAsync(Permissions.CAMERA);
         await Permissions.askAsync(Permissions.CAMERA_ROLL);
     }
@@ -55,14 +58,26 @@ export default class AddImagePage extends React.Component {
     };
 
 
+    /**
+     * Once a image is chosen, it is uploaded to imgur.
+     * @private
+     */
     _uploadImage()
     {
 
+        if (this.state.image === null) {
+            this.refs.toast.show('No image selected');
+            return;
+        }
 
 
-        API.uploadImage(this.state.image, global.token, 'base64', "lol", "pd", "dfdf")
+        this.refs.toast.show('Uploading image ...');
+        API.uploadImage(this.state.image, global.token, this.state.title, this.state.description)
             .then((response) => {
                 console.log(response)
+                if (response.success === true)
+                    this.refs.toast.show('Succesfully uploaded image');
+
             }, (error) => {
                 console.log(error)
             })
@@ -83,9 +98,29 @@ export default class AddImagePage extends React.Component {
                     </TouchableOpacity>
                 </View>
 
-                <TouchableOpacity style={styles.chooseImageButton} onPress={this._uploadImage.bind(this)}>
-                    <Text style={{fontWeight: 'bold', color: 'white'}}>Upload</Text>
-                </TouchableOpacity>
+                <View style={{flex: 1}}>
+                <TextField label={"Title"}
+                           baseColor={'#FFF'}
+                           textColor={'white'}
+                           tintColor={'white'}
+                           labelHeight={100}
+                           onChangeText={(title) => this.setState({title})}
+                />
+                    <TextField label={"Description"}
+                               baseColor={'#FFF'}
+                               textColor={'white'}
+                               tintColor={'white'}
+                               onChangeText={(description) => this.setState({description})}
+                    />
+                </View>
+
+
+                <View style={{alignItems: 'center', justifyContent: 'center'}}>
+                    <TouchableOpacity style={styles.chooseImageButton} onPress={this._uploadImage.bind(this)}>
+                        <Text style={{fontWeight: 'bold', color: 'white'}}>Upload</Text>
+                    </TouchableOpacity>
+                </View>
+                <Toast ref="toast"/>
 
 
             </View>
@@ -107,6 +142,9 @@ const styles = StyleSheet.create({
         height: 30,
         backgroundColor: 'green',
         alignItems: 'center', justifyContent: 'center'
+    },
+    text: {
+        color: 'white'
     }
 
 });
