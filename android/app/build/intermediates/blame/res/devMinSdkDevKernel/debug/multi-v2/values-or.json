@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/NANAA/Tek3/DEV_epicture_2018/android/app/build/intermediates/incremental/mergeDevMinSdkDevKernelDebugResources/merged.dir/values-or/values-or.xml",
+            "map": [
+                {
+                    "source": "/home/NANAA/.gradle/caches/transforms-1/files-1.1/firebase-messaging-17.1.0.aar/821a8cd5bce45ab0f7f9c3ebb73ba303/res/values-or/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "205",
+                        "endColumns": "102",
+                        "endOffsets": "307"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "106",
+                        "endOffsets": "157"
+                    }
+                }
+            ]
+        }
+    ]
+}
