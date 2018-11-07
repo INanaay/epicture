@@ -99,7 +99,6 @@ apply from: 'expo.gradle'
 
 
 dependencies {
-    compile project(':react-native-vector-icons')
 
   implementation 'com.facebook.fresco:fresco:1.9.0'
 

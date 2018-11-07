@@ -1,4 +1,4 @@
-#Mon Nov 05 16:29:47 CET 2018
+#Wed Nov 07 16:38:47 CET 2018
 base.0=/home/NANAA/Tek3/DEV_epicture_2018/android/app/build/intermediates/transforms/dexMerger/devMinSdkDevKernel/debug/1
 path.0=classes.dex
 renamed.0=classes.dex

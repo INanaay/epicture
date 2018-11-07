@@ -4,7 +4,6 @@ ADDED from /home/NANAA/Tek3/DEV_epicture_2018/android/app/src/main/AndroidManife
 INJECTED from /home/NANAA/Tek3/DEV_epicture_2018/android/app/src/main/AndroidManifest.xml:2:1-321:12
 INJECTED from /home/NANAA/Tek3/DEV_epicture_2018/android/app/src/main/AndroidManifest.xml:2:1-321:12
 INJECTED from /home/NANAA/Tek3/DEV_epicture_2018/android/app/src/main/AndroidManifest.xml:2:1-321:12
-MERGED from [:react-native-vector-icons] /home/NANAA/Tek3/DEV_epicture_2018/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [host.exp.exponent:expoview:30.0.0] /home/NANAA/.gradle/caches/transforms-1/files-1.1/expoview-30.0.0.aar/9f3b5a94d29e2f35b49bbdb90959ae04/AndroidManifest.xml:2:1-88:12
 MERGED from [com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/leakcanary-android-no-op-1.4-beta1.aar/ec5487f84992c556f626ff30fb6f4bdf/AndroidManifest.xml:17:1-24:12
 MERGED from [com.facebook.react:react-native:30.0.0] /home/NANAA/.gradle/caches/transforms-1/files-1.1/react-native-30.0.0.aar/91632e9fce027f6b063139384aa80af7/AndroidManifest.xml:2:1-15:12
@@ -48,10 +47,10 @@ MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/NANAA/.gradle/caches/
 MERGED from [host.exp.exponent:expo-face-detector:1.0.2] /home/NANAA/.gradle/caches/transforms-1/files-1.1/expo-face-detector-1.0.2.aar/ef3b98a7b55b66c0c3f0227b2ca8ba9b/AndroidManifest.xml:2:1-11:12
 MERGED from [host.exp.exponent:expo-media-library:1.0.0] /home/NANAA/.gradle/caches/transforms-1/files-1.1/expo-media-library-1.0.0.aar/9f96dcc22246b9711deb908ef3f69200/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:exifinterface:27.1.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.1.aar/c25ac8618fcb58e129929c9ebb76b005/AndroidManifest.xml:17:1-22:12
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.0.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.0.1.aar/041c482628078907fccdbcf123241df8/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:animated-gif:1.0.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/animated-gif-1.0.1.aar/7fcee276fee0645065fd39bbbb15b989/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:animated-webp:1.0.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/animated-webp-1.0.1.aar/92fd3c5d6699daa9ea6e7bc691c492f8/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:webpsupport:1.0.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/webpsupport-1.0.1.aar/a09ac20472773ce42babf0d71fc129c3/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.0.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.0.1.aar/041c482628078907fccdbcf123241df8/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:animated-base:1.0.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/animated-base-1.0.1.aar/190c695281a55d582fe45784637f4017/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:drawee:1.9.0] /home/NANAA/.gradle/caches/transforms-1/files-1.1/drawee-1.9.0.aar/ee8e3ec354d1fe69c529786f7c2d5e2a/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:imagepipeline:1.9.0] /home/NANAA/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.9.0.aar/0a2c9c4131c9e2c327618a46ba932098/AndroidManifest.xml:2:1-9:12
@@ -1022,8 +1021,6 @@ uses-sdk
 INJECTED from /home/NANAA/Tek3/DEV_epicture_2018/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/NANAA/Tek3/DEV_epicture_2018/android/app/src/main/AndroidManifest.xml
 INJECTED from /home/NANAA/Tek3/DEV_epicture_2018/android/app/src/main/AndroidManifest.xml
-MERGED from [:react-native-vector-icons] /home/NANAA/Tek3/DEV_epicture_2018/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-vector-icons] /home/NANAA/Tek3/DEV_epicture_2018/node_modules/react-native-vector-icons/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [host.exp.exponent:expoview:30.0.0] /home/NANAA/.gradle/caches/transforms-1/files-1.1/expoview-30.0.0.aar/9f3b5a94d29e2f35b49bbdb90959ae04/AndroidManifest.xml:7:5-9:41
 MERGED from [host.exp.exponent:expoview:30.0.0] /home/NANAA/.gradle/caches/transforms-1/files-1.1/expoview-30.0.0.aar/9f3b5a94d29e2f35b49bbdb90959ae04/AndroidManifest.xml:7:5-9:41
 MERGED from [com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/leakcanary-android-no-op-1.4-beta1.aar/ec5487f84992c556f626ff30fb6f4bdf/AndroidManifest.xml:20:5-22:41
@@ -1110,14 +1107,14 @@ MERGED from [host.exp.exponent:expo-media-library:1.0.0] /home/NANAA/.gradle/cac
 MERGED from [host.exp.exponent:expo-media-library:1.0.0] /home/NANAA/.gradle/caches/transforms-1/files-1.1/expo-media-library-1.0.0.aar/9f96dcc22246b9711deb908ef3f69200/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:exifinterface:27.1.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.1.aar/c25ac8618fcb58e129929c9ebb76b005/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:exifinterface:27.1.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/exifinterface-27.1.1.aar/c25ac8618fcb58e129929c9ebb76b005/AndroidManifest.xml:20:5-44
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.0.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.0.1.aar/041c482628078907fccdbcf123241df8/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.0.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.0.1.aar/041c482628078907fccdbcf123241df8/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:animated-gif:1.0.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/animated-gif-1.0.1.aar/7fcee276fee0645065fd39bbbb15b989/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:animated-gif:1.0.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/animated-gif-1.0.1.aar/7fcee276fee0645065fd39bbbb15b989/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:animated-webp:1.0.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/animated-webp-1.0.1.aar/92fd3c5d6699daa9ea6e7bc691c492f8/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:animated-webp:1.0.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/animated-webp-1.0.1.aar/92fd3c5d6699daa9ea6e7bc691c492f8/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:webpsupport:1.0.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/webpsupport-1.0.1.aar/a09ac20472773ce42babf0d71fc129c3/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:webpsupport:1.0.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/webpsupport-1.0.1.aar/a09ac20472773ce42babf0d71fc129c3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.0.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.0.1.aar/041c482628078907fccdbcf123241df8/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.0.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.0.1.aar/041c482628078907fccdbcf123241df8/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:animated-base:1.0.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/animated-base-1.0.1.aar/190c695281a55d582fe45784637f4017/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:animated-base:1.0.1] /home/NANAA/.gradle/caches/transforms-1/files-1.1/animated-base-1.0.1.aar/190c695281a55d582fe45784637f4017/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:drawee:1.9.0] /home/NANAA/.gradle/caches/transforms-1/files-1.1/drawee-1.9.0.aar/ee8e3ec354d1fe69c529786f7c2d5e2a/AndroidManifest.xml:5:5-7:41
