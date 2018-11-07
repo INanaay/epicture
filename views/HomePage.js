@@ -1,5 +1,5 @@
 import React from 'react';
-import {ListView, View, Image, Dimensions, Text, ScrollView, TouchableOpacity, StyleSheet, ActivityIndicator} from 'react-native'
+import {ListView, View, Image, Dimensions, Text, ScrollView, TouchableOpacity, StyleSheet, ActivityIndicator, TouchableWithoutFeedback} from 'react-native'
 import {MaterialIcons } from '@expo/vector-icons/'
 import API from '../utils/api'
 import {createBottomTabNavigator, createStackNavigator} from 'react-navigation'
@@ -111,6 +111,14 @@ class HomePage extends React.Component {
         }
     }
 
+    viewAlbum(data)
+    {
+        console.log(data)
+        this.props.navigation.navigate('AlbumPage', {
+           images: data
+        });
+    }
+
 
     /**
      *  We first must check if the image is a gif, album of image. For now, we dont handle gifs.
@@ -126,6 +134,7 @@ class HomePage extends React.Component {
       let imgWidth;
       let title = rowData.title;
       let isAlbum = false;
+      let ImageRender;
 
         if (rowData.hasOwnProperty("images"))
         {
@@ -136,6 +145,16 @@ class HomePage extends React.Component {
             imgHeight = rowData.images[0].height
             imgWidth = rowData.images[0].width
             isAlbum = true;
+            imgHeight = imgHeight * windowWidth / imgWidth
+
+            ImageRender =
+            <TouchableWithoutFeedback   onPress={() => this.viewAlbum(rowData.images)} >
+                <Image
+                    source={{ uri: link }}
+                    style={{ height: imgHeight, width: windowWidth, resizeMode: 'stretch', flex: 1
+                    }}
+                />
+            </TouchableWithoutFeedback>
         }
         else if (rowData.hasOwnProperty("gifv"))
         {
@@ -147,9 +166,15 @@ class HomePage extends React.Component {
             link = rowData.link
             imgHeight = rowData.height
             imgWidth = rowData.width
+            imgHeight = imgHeight * windowWidth / imgWidth
+            ImageRender =
+                <Image
+                    source={{ uri: link }}
+                    style={{ height: imgHeight, width: windowWidth, resizeMode: 'stretch', flex: 1
+                    }}
+                    />
         }
 
-        imgHeight = imgHeight * windowWidth / imgWidth
 
         return (
 
@@ -163,11 +188,7 @@ class HomePage extends React.Component {
                            <MaterialIcons name="favorite" size={25} color='green' />
                        </TouchableOpacity>
                    </View>
-                   <Image
-                        source={{ uri: link }}
-                        style={{ height: imgHeight, width: windowWidth, resizeMode: 'stretch', flex: 1
-                        }}
-                   />
+                   {ImageRender}
                 </View>
         )
     }

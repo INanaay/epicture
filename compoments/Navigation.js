@@ -4,6 +4,7 @@ import LoginScreen from "../views/login";
 import globalstyle from '../styles'
 import HomePage from "../views/HomePage";
 import SearchPage from "../views/SearchPage";
+import AlbumPage from "../views/AlbumPage";
 
 /**
  * This is the main stack navigator. The home page is the login screen. Once logged in,
@@ -25,6 +26,16 @@ export default Application = createStackNavigator ({
     },
     SearchPage: {
         screen: SearchPage,
+        navigationOptions:
+            {
+                headerStyle: {
+                    backgroundColor: globalstyle.backgroundColor
+                },
+                headerTintColor: '#fff',
+            },
+    },
+    AlbumPage: {
+        screen: AlbumPage,
         navigationOptions:
             {
                 headerStyle: {

@@ -33,8 +33,6 @@ export default class LoginScreen extends React.Component {
         API.login()
             .then((response) => {
 
-
-
                 this.setState({
                     url: response.url
                 })

@@ -6,7 +6,7 @@ import {
     ScrollView,
     StyleSheet,
     Text,
-    TouchableOpacity,
+    TouchableOpacity, TouchableWithoutFeedback,
     View
 } from "react-native";
 import React from "react";
@@ -108,6 +108,15 @@ export default class FavoritesPage extends React.Component {
         }
     }
 
+
+    viewAlbum(data)
+    {
+        console.log(data)
+        this.props.navigation.navigate('AlbumPage', {
+            images: data
+        });
+    }
+
     renderRow(rowData) {
 
         let link;
@@ -115,6 +124,8 @@ export default class FavoritesPage extends React.Component {
         let imgWidth;
         let title = rowData.title;
         let isAlbum = false;
+        let ImageRender;
+
 
 
 
@@ -125,7 +136,17 @@ export default class FavoritesPage extends React.Component {
             link = rowData.images[0].link
             imgHeight = rowData.images[0].height
             imgWidth = rowData.images[0].width
+            imgHeight = imgHeight * windowWidth / imgWidth
+
             isAlbum = true;
+            ImageRender =
+                <TouchableWithoutFeedback   onPress={() => this.viewAlbum(rowData.images)} >
+                    <Image
+                        source={{ uri: link }}
+                        style={{ height: imgHeight, width: windowWidth, resizeMode: 'stretch', flex: 1
+                        }}
+                    />
+                </TouchableWithoutFeedback>
 
         }
         else if (rowData.hasOwnProperty("gifv")) {
@@ -137,9 +158,16 @@ export default class FavoritesPage extends React.Component {
             link = rowData.link
             imgHeight = rowData.height
             imgWidth = rowData.width
+            imgHeight = imgHeight * windowWidth / imgWidth
+
+            ImageRender =
+                <Image
+                    source={{ uri: link }}
+                    style={{ height: imgHeight, width: windowWidth, resizeMode: 'stretch', flex: 1
+                    }}
+                />
         }
 
-        imgHeight = imgHeight * windowWidth / imgWidth
 
         return (
             <View style={styles.rowStyle}>
@@ -152,12 +180,7 @@ export default class FavoritesPage extends React.Component {
                         <MaterialIcons name="favorite" size={25} color="green"/>
                     </TouchableOpacity>
                 </View>
-                <Image
-                    source={{uri: link}}
-                    style={{
-                        height: imgHeight, width: windowWidth, resizeMode: 'stretch', flex: 1
-                    }}
-                />
+                {ImageRender}
             </View>
         )
     }
