@@ -19,13 +19,15 @@ let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
  * This is the Home view.
  */
 
-class HomePage extends React.Component {
+export default class HomePage extends React.Component {
 
 
     constructor (props) {
         super(props)
 
         const images = this.props.navigation.state.params.images
+
+        console.log("images = " + images)
 
         this.state = {
             dataSource: ds.cloneWithRows(images),
@@ -45,7 +47,6 @@ class HomePage extends React.Component {
     favoriteImage(id, isAlbum) {
 
 
-        console.log("SALUT")
             API.favoriteImage(id, global.token)
                 .then((response) => {
                     console.log(response)
@@ -79,7 +80,6 @@ class HomePage extends React.Component {
         let isAlbum = false;
         let ImageRender;
 
-        console.log(title)
 
             link = rowData.link
             imgHeight = rowData.height
@@ -169,65 +169,3 @@ const styles = StyleSheet.create({
 
 });
 
-
-/**
- * This is the bottom menu. It is a TabNavigator. Each time the user switches tab,
- * the whole page is rendered again, so the images are refreshed.
- *
- * Depending on the routeName, we choose an icon for the bottom menu
- */
-
-export default HomePage = createBottomTabNavigator ({
-
-
-
-        HomePage: {
-            screen: HomePage
-
-        },
-        Favorites: {
-            screen: FavoritesPage,
-        },
-        UserImages: {
-            screen: UserImagesPage
-        },
-        AddImagePage: {
-            screen: AddImagePage
-        },
-
-    },
-    {
-
-        navigationOptions: ({navigation}) => ({
-
-
-            tabBarIcon: ({tintColor}) => {
-                const {routeName} = navigation.state;
-                let iconName;
-
-                if (routeName === "HomePage") {
-                    iconName = "home"
-                }
-                else if (routeName === "Favorites")
-                    iconName = "favorite"
-                else if (routeName === "UserImages")
-                    iconName = "collections"
-                else if (routeName === "AddImagePage")
-                    iconName =  "add-a-photo"
-
-                return <MaterialIcons name={iconName} size={25} color={tintColor} />
-            },
-            tabBarOptions: {
-                showLabel: false, // hide labels
-                activeTintColor: 'green',
-                inactiveTintColor: 'white',
-
-
-                style: {
-                    backgroundColor: '#474747' // TabBar background
-                }
-
-            }
-
-        })
-    })

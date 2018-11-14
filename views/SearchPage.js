@@ -72,9 +72,9 @@ export default class SearchPage extends React.Component {
                     if (response.success === true)
                     {
                         if (response.data === "favorited")
-                            this.refs.toast.show('Image Favorited');
+                            this.refs.toast.show('Album Favorited');
                         else
-                            this.refs.toast.show('Image Unfavorited');
+                            this.refs.toast.show('Albun Unfavorited');
 
                     }
 

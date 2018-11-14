@@ -9,6 +9,7 @@ import FavoritesPage from "./FavoritesPage";
 import UserImagesPage from "./UserImagesPage";
 import AddImagePage from "./AddImagePage";
 import Toast, {DURATION} from 'react-native-easy-toast'
+import ProfilePage from "./ProfilePage";
 
 let windowWidth = Dimensions.get('window').width
 
@@ -32,6 +33,7 @@ class HomePage extends React.Component {
             loading: true,
             images: [],
             searchText: '',
+            sort: 'viral'
         }
 
     }
@@ -83,9 +85,9 @@ class HomePage extends React.Component {
                     if (response.success === true)
                     {
                         if (response.data === "favorited")
-                            this.refs.toast.show('Image Favorited');
+                            this.refs.toast.show('Albun Favorited');
                         else
-                            this.refs.toast.show('Image Unfavorited');
+                            this.refs.toast.show('Albun Unfavorited');
 
                     }
 
@@ -113,7 +115,6 @@ class HomePage extends React.Component {
 
     viewAlbum(data)
     {
-        console.log(data)
         this.props.navigation.navigate('AlbumPage', {
            images: data
         });
@@ -126,53 +127,49 @@ class HomePage extends React.Component {
      * @returns {*}
      */
 
-    renderRow (rowData) {
+    renderRow(rowData) {
+
+        let link;
+        let imgHeight;
+        let imgWidth;
+        let title = rowData.title;
+        let isAlbum = false;
+        let ImageRender;
 
 
-      let link;
-      let imgHeight;
-      let imgWidth;
-      let title = rowData.title;
-      let isAlbum = false;
-      let ImageRender;
 
-        if (rowData.hasOwnProperty("images"))
-        {
-            if (rowData.images[0].hasOwnProperty("gifv"))
-                return null;
+
+        if (rowData.hasOwnProperty("images")) {
 
             link = rowData.images[0].link
             imgHeight = rowData.images[0].height
             imgWidth = rowData.images[0].width
-            isAlbum = true;
             imgHeight = imgHeight * windowWidth / imgWidth
 
+            isAlbum = true;
             ImageRender =
-            <TouchableWithoutFeedback   onPress={() => this.viewAlbum(rowData.images)} >
-                <Image
-                    source={{ uri: link }}
-                    style={{ height: imgHeight, width: windowWidth, resizeMode: 'stretch', flex: 1
-                    }}
-                />
-            </TouchableWithoutFeedback>
-        }
-        else if (rowData.hasOwnProperty("gifv"))
-        {
-            link = rowData.gifv
-            return null
+                <TouchableWithoutFeedback   onPress={() => this.viewAlbum(rowData.images)} >
+                    <Image
+                        source={{ uri: link }}
+                        style={{ height: imgHeight, width: windowWidth, resizeMode: 'stretch', flex: 1
+                        }}
+                    />
+                </TouchableWithoutFeedback>
 
         }
+
         else {
             link = rowData.link
             imgHeight = rowData.height
             imgWidth = rowData.width
             imgHeight = imgHeight * windowWidth / imgWidth
+
             ImageRender =
                 <Image
                     source={{ uri: link }}
                     style={{ height: imgHeight, width: windowWidth, resizeMode: 'stretch', flex: 1
                     }}
-                    />
+                />
         }
 
 
@@ -206,6 +203,52 @@ class HomePage extends React.Component {
         })
     }
 
+    sortViral()
+    {
+
+        console.log("SOrting viral")
+        if (this.state.sort === "viral")
+            return;
+
+        this.setState({loading: true})
+
+        API.getViral()
+            .then((response) => {
+                this.setState({
+                    dataSource: ds.cloneWithRows(response.data),
+                    loading: false,
+                    sort: 'viral'
+
+                })
+            }, (error) => {
+                console.log('error: ', error)
+            })
+
+    }
+
+    sortTop()
+    {
+
+        console.log("SOrting Top")
+        if (this.state.sort === "Top")
+            return;
+
+        this.setState({loading: true})
+
+        API.getTop()
+            .then((response) => {
+                this.setState({
+                    dataSource: ds.cloneWithRows(response.data),
+                    loading: false,
+                    sort: 'Top'
+
+                })
+            }, (error) => {
+                console.log('error: ', error)
+            })
+
+    }
+
 
     render () {
         let { loading, images } = this.state
@@ -226,12 +269,23 @@ class HomePage extends React.Component {
         return (
             <View style={{flex: 1, backgroundColor: globalstyle.backgroundColor}}>
 
-                <View style={{marginTop: 25}}>
-                    <SearchBar
-
+                <View style={{flexDirection: 'row', width: '100%'}}>
+                        <SearchBar
+                            containerStyle={{backgroundColor: '#474747', width: '70%', marginTop: 25}}
                         onSubmitEditing={() => this.navigateSearch()}
                         onChangeText={(searchText) => this.setState({searchText})}
-                    />
+                        />
+                    <View style={{ backgroundColor: '#474747', marginTop: 26, marginBottom: 1, flexDirection: 'row'}}>
+                        <TouchableOpacity style={styles.filterStyle} onPress={() => this.sortViral()}>
+                            <Text style={styles.titleStyle}>Viral</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={styles.filterStyle}  onPress={() => this.sortTop()}>
+                            <Text style={styles.titleStyle}>Top</Text>
+                        </TouchableOpacity>
+                    </View>
+
+
                 </View>
                 <ScrollView style={{flex: 1, }}>
                     {images}
@@ -246,6 +300,12 @@ const styles = StyleSheet.create({
     titleContainer: {flex: 1, backgroundColor: '#474747', borderTopLeftRadius: 6, borderTopRightRadius: 6, padding: 10, flexDirection: "row"
 
     },
+    filterStyle:
+        {
+            width: 55 ,
+            alignItems: 'center',
+            justifyContent: 'center',
+        },
     container: {
         flex: 1,
         backgroundColor: '#fff',
@@ -253,7 +313,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     titleStyle: {
-        color: '#FFF',
+        color: '#fff',
         fontWeight: 'bold'
     },
     descriptionStyle: {
@@ -282,7 +342,6 @@ const styles = StyleSheet.create({
 export default HomePage = createBottomTabNavigator ({
 
 
-
     HomePage: {
         screen: HomePage
 
@@ -297,7 +356,11 @@ export default HomePage = createBottomTabNavigator ({
             screen: AddImagePage
         },
 
+    ProfilePage: {
+        screen: ProfilePage
+    }
         },
+
     {
 
         navigationOptions: ({navigation}) => ({
@@ -316,6 +379,8 @@ export default HomePage = createBottomTabNavigator ({
                     iconName = "collections"
                 else if (routeName === "AddImagePage")
                     iconName =  "add-a-photo"
+                else if (routeName === "ProfilePage")
+                    iconName = "account-box"
 
                 return <MaterialIcons name={iconName} size={25} color={tintColor} />
             },

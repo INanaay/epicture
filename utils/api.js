@@ -79,6 +79,19 @@ module.exports = {
             })
     },
 
+
+    getAccountInfo(name, token) {
+        return fetch(`https://api.imgur.com/3/account/${name}`, {
+            headers: {
+                Authorization: 'Bearer ' + token
+
+            }
+        })
+            .then((response) => {
+                return response.json()
+            })
+    },
+
     getUserFavorites(name, token) {
       return fetch(`https://api.imgur.com/3/account/${name}/favorites/`, {
           headers: {
@@ -93,6 +106,17 @@ module.exports = {
 
     getViral() {
         return fetch("https://api.imgur.com/3/gallery/hot/viral/0.json", {
+            headers: {
+                Authorization: 'Client-ID ' + clientId
+            }
+        })
+            .then((response) => {
+
+                return response.json()
+            })
+    },
+    getTop() {
+        return fetch("https://api.imgur.com/3/gallery/hot/top/0.json", {
             headers: {
                 Authorization: 'Client-ID ' + clientId
             }

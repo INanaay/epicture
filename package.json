@@ -27,6 +27,7 @@
     "react": "16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
     "react-native-app-auth": "^4.0.0",
+    "react-native-cacheable-image": "^2.0.0",
     "react-native-easy-toast": "^1.1.0",
     "react-native-elements": "^0.19.1",
     "react-native-image-base64": "^0.1.3",

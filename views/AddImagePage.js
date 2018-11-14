@@ -75,8 +75,14 @@ export default class AddImagePage extends React.Component {
         API.uploadImage(this.state.image, global.token, this.state.title, this.state.description)
             .then((response) => {
                 console.log(response)
-                if (response.success === true)
+                if (response.success === true) {
                     this.refs.toast.show('Succesfully uploaded image');
+                    this.setState({
+                        image: null,
+                        title: null,
+                        description: null
+                    })
+                }
 
             }, (error) => {
                 console.log(error)

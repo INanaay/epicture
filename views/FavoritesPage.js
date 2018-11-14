@@ -43,6 +43,7 @@ export default class FavoritesPage extends React.Component {
         console.log("YO")
         API.getUserFavorites(global.name, global.token)
             .then((response) => {
+                console.log(response)
                 this.setState({
                     dataSource: ds.cloneWithRows(response.data),
                     loading: false
@@ -80,9 +81,9 @@ export default class FavoritesPage extends React.Component {
                     if (response.success === true)
                     {
                         if (response.data === "favorited")
-                            this.refs.toast.show('Image Favorited');
+                            this.refs.toast.show('Album Favorited');
                         else
-                            this.refs.toast.show('Image Unfavorited');
+                            this.refs.toast.show('Album Unfavorited');
 
                     }
 
@@ -130,8 +131,6 @@ export default class FavoritesPage extends React.Component {
 
 
         if (rowData.hasOwnProperty("images")) {
-            if (rowData.images[0].hasOwnProperty("gifv"))
-                return null;
 
             link = rowData.images[0].link
             imgHeight = rowData.images[0].height
@@ -149,11 +148,7 @@ export default class FavoritesPage extends React.Component {
                 </TouchableWithoutFeedback>
 
         }
-        else if (rowData.hasOwnProperty("gifv")) {
-            link = rowData.gifv
-            return null
 
-        }
         else {
             link = rowData.link
             imgHeight = rowData.height
